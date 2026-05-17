@@ -1,7 +1,47 @@
 @import "tailwindcss";
-@plugin "daisyui"{
-  themes: night, dark, default, forest, sunset
-};
+ @plugin 'daisyui' {
+  themes: vercel-dark --default;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'vercel-dark';
+  default: true;
+  color-scheme: dark;
+
+  /* ── Base surfaces ── */
+  --color-base-100: oklch(5% 0 0);       /* #000000 - page bg */
+  --color-base-200: oklch(10% 0 0);      /* #111111 - nav / sidebar */
+  --color-base-300: oklch(14% 0 0);      /* #1a1a1a - cards / panels */
+  --color-base-content: oklch(93% 0 0);  /* #ededed - primary text */
+
+  /* ── Brand ── */
+  --color-primary: oklch(100% 0 0);      /* #ffffff - CTA button */
+  --color-primary-content: oklch(0% 0 0);/* #000000 - text ON primary btn */
+  --color-secondary: oklch(55% 0 0);     /* #888888 - secondary btn */
+  --color-secondary-content: oklch(100% 0 0);
+  --color-accent: oklch(30% 0 0);        /* #444444 - subtle highlights */
+  --color-accent-content: oklch(93% 0 0);
+  --color-neutral: oklch(22% 0 0);       /* #333333 - borders / dividers */
+  --color-neutral-content: oklch(93% 0 0);
+
+  /* ── Semantic ── */
+  --color-info: oklch(70% 0.15 220);     /* blue */
+  --color-info-content: oklch(0% 0 0);
+  --color-success: oklch(72% 0.17 160);  /* green */
+  --color-success-content: oklch(0% 0 0);
+  --color-warning: oklch(75% 0.18 80);   /* amber */
+  --color-warning-content: oklch(0% 0 0);
+  --color-error: oklch(62% 0.22 25);     /* red */
+  --color-error-content: oklch(100% 0 0);
+
+  /* ── Shape ── */
+  --radius-selector: 0.375rem;
+  --radius-field: 0.375rem;
+  --radius-box: 0.5rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
 
 :root {
   --background: #ffffff;

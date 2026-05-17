@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, {useState, useEffect, useRef, use} from 'react'
 import { CldImage } from 'next-cloudinary';
@@ -42,7 +42,7 @@ const socialFormats = {
 
 
         try {
-            const response = await fetch ("api/image-upload", {
+            const response = await fetch ("/api/image-upload", {
               method: "POST",
               body: formData
             })
